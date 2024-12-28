@@ -14,10 +14,10 @@ let loop3 = (i) => {
             strings = doc.querySelector("body > main > script:nth-child(5)").innerHTML;
             if (strings.includes("attachmentid")) {
                 list[i].pdf = strings.substring(strings.indexOf("attachmentid")+15,strings.indexOf("attachmentid")+59);
-                list[i].pdftitile = strings.substring(strings.indexOf("documenttitle")+16,strings.indexOf("tocid")-3);
+                list[i].doctitle = strings.substring(strings.indexOf("documenttitle")+16,strings.indexOf("tocid")-3);
             } else {
                 list[i].pdf = "--"
-                list[i].pdftitile = "--"
+                list[i].doctitle = "--"
             }
         }).then(() => {
             console.log((i + 1) + "/" + list.length);
