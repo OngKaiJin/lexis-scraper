@@ -1,11 +1,12 @@
 nodes = [];
 toc = [];
 years = [];
+crid = '';
 let loadpatch = (node) =>
     fetch("https://advance.lexis.com/r/tocprovider/4c2fk/toc/4c2fk", {
         "headers": {
             "content-type": "application/json",
-            "x-ln-currentrequestid": "026458b2-c785-4b18-bf23-28825c8ab08b",
+            "x-ln-currentrequestid": crid,
         },
         "body": "{\"id\":\"4c2fk\",\"props\":{\"action\":\"collapse\",\"items\":[{\"fieldName\":\"nodeId\",\"value\":\"" + node + "\"}]}}",
         "method": "PATCH",
@@ -58,8 +59,10 @@ fetch("https://advance.lexis.com/toc/?pdtocfullpath=%2fshared%2ftableofcontents%
     "headers": {
         "accept": "application/json, text/javascript, */*; q=0.01",
     }
-}).then((resp) => resp.json())
-.then((content) => {
+}).then((resp) => {
+    crid = new URLSearchParams(resp.url).get("crid");
+    return resp.json();
+}).then((content) => {
     for (i of content.collections.componentmodels.collections.featureproviders[0].collections.toccontainer.collections.tocnodes[0].collections.nodehierarchy) {
         toc.push(i.id);
         years.push(i.props.linktemplatetitle);
