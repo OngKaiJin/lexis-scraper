@@ -1,7 +1,7 @@
 list = [];
-for (const i of nodes) {
+for (const i of nodes.toReversed()) {
     for (const [yearobj, year] of Object.entries(i)) {
-        for (const i of year) {
+        for (const i of year.toReversed()) {
             for (const [volumeobj, volume] of Object.entries(i)) {
                 for (const i of volume) {
                     let obj = new Object;
