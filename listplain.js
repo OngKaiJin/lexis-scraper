@@ -4,4 +4,4 @@ for (const i of list) {
         command += ('' + i.pdf).slice(16) + '\n';
     }
 }
-console.log(command);
+console.log(command.slice(0,-1));
