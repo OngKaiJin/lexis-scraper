@@ -24,3 +24,7 @@ Then, run the below to download PDFs. Each download will modify the ```cookiefil
 ```command
 for /f "usebackq tokens=*" %i in (`more "E:\Malayan Law Journal\command.txt"`) do curl "https://advance.lexis.com/r/documentprovider/gvx3k/attachment/data?attachmentid=urn:contentItem:%i&attachmenttype=PDF&attachmentname=OriginalSourceImage&origination=BlobStore&sequencenumber=1&ishotdoc=false" -o "%i" -b cookiefile -c cookiefile
 ```
+Optional. The below saves log for each download, and uses two times and more of size.
+```command
+for /f "usebackq tokens=*" %i in (`more "E:\Malayan Law Journal\command.txt"`) do curl "https://advance.lexis.com/r/documentprovider/gvx3k/attachment/data?attachmentid=urn:contentItem:%i&attachmenttype=PDF&attachmentname=OriginalSourceImage&origination=BlobStore&sequencenumber=1&ishotdoc=false" -o "%i" -b cookiefile -c cookiefile --trace-time --trace-ascii %i-log.txt
+```
