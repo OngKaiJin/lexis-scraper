@@ -14,11 +14,13 @@ In console, run [listplain.js](https://github.com/OngKaiJin/lexis-scraper/blob/m
 ### Download PDFs
 Log in to account, and copy ```lna2``` manually from inspect's network tab.
 
-Launch terminal at desired folder path. 
+Launch terminal at desired folder path.
+> [!Note]
+> For optimal speed, use efficient storage for the run, avoiding intervals of delay of creating files, especially when it rewrites cookie.
 
 In terminal, run the below to set a cookie (replace the value in ```lna2```). A ```cookiefile``` will be created.
 ```command
-curl "https://advance.lexis.com" -b lna2=ZDZjNmVmMDhmY2QwZmQxMzMwNzQ3NDUyMjEyMTljNDY5MDM3ZjRhNDVkNTMyNWY2NDYzOTJkZDBhMDAxN2I2NzY3YzM4Y2Q1dXJuOnVzZXI6UEExOTUwMjU5MzAhMTAwMDIwMiwxNTIyNDY4LCFub25l -c cookiefile
+curl "https://advance.lexis.com" -b lna2=ZWMyYjhiNGFlZGUxMmIyZDA4NzM4NDMwM2U1MjU3NmNlYjQ3MjA5MTYxY2QzM2Y1NzUzNTAxNmU4MjRhMDRjZjY3YzRmZWNhdXJuOnVzZXI6UEExOTUwMjU5MzAhMTAwMDIwMiwxNTIyNDY4LCFub25l -c cookiefile
 ```
 Then, run the below to download PDFs. Each download will modify the ```cookiefile```.
 ```command
