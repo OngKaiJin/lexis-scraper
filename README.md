@@ -20,7 +20,7 @@ Launch terminal at desired folder path.
 
 In terminal, run the below to set a cookie (replace the value in ```lna2```). A ```cookiefile``` will be created.
 ```command
-curl "https://advance.lexis.com" -b lna2=ZWMyYjhiNGFlZGUxMmIyZDA4NzM4NDMwM2U1MjU3NmNlYjQ3MjA5MTYxY2QzM2Y1NzUzNTAxNmU4MjRhMDRjZjY3YzRmZWNhdXJuOnVzZXI6UEExOTUwMjU5MzAhMTAwMDIwMiwxNTIyNDY4LCFub25l -c cookiefile
+curl "https://advance.lexis.com" -b lna2=MDM0ZTkxOTJiNWY5ZjBmYjdlMTU0MWZhODdjODMyY2MyMjU0YzBmZWE1NTkzZTVlM2I5NmJmYWYxODE1OGU0NDY3YzYwMTQ0dXJuOnVzZXI6UEExOTUwMjU5MzAhMTAwMDIwMiwxNTIyNDY4LCFub25l -c cookiefile
 ```
 Then, run the below to download PDFs. Each download will modify the ```cookiefile```.
 ```command
