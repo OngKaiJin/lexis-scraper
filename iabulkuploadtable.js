@@ -35,7 +35,7 @@ for (const i of nodes.toReversed()) {
                             output += ',"' + 'Malayan Law Journal, ' + yearobj + ', ' + volumeobj + '"';
                             output += ',[' + yearobj + ']';
                             output += ',texts';
-                            output += ',opensource'
+                            output += ',opensource';
                         } 
                         if (!k.title.includes('[' + yearobj + '] ' + volumenum + ' MLJ')) {
                             imperfect.push(k.title);
