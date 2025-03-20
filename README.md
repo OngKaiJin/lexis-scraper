@@ -30,3 +30,5 @@ Optional. The below saves log for each download, and uses two times and more of 
 ```command
 for /f "usebackq tokens=*" %i in (`more "E:\Malayan Law Journal\command.txt"`) do curl "https://advance.lexis.com/r/documentprovider/gvx3k/attachment/data?attachmentid=urn:contentItem:%i&attachmenttype=PDF&attachmentname=OriginalSourceImage&origination=BlobStore&sequencenumber=1&ishotdoc=false" -o "%i" -b cookiefile -c cookiefile --trace-time --trace-ascii %i-log.txt
 ```
+# Consignment
+* https://archive.org/details/malayan-law-journal
