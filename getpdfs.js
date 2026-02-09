@@ -1,5 +1,5 @@
 let loop3 = (i) => {
-    if (list[i].hasOwnProperty("pdf") || list[i].id == "--") {
+    if (list[i] == undefined || list[i].hasOwnProperty("pdf") || list[i].id == "--") {
         console.log((i + 1) + "/" + list.length);
         if (i < list.length - 1) {
             loop3(i + 1);
