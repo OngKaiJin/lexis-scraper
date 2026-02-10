@@ -34,7 +34,7 @@ for (const i of nodes.toReversed()) {
                         volumenum = volumeobj.replace('Volume ','').replace('Supplementary','supp');
                         if (count == 0) {
                             output += 'mlj_' + yearobj + '_' + volumenum;
-                        } 
+                        }
                         output += ',"' + k.pdf.slice(16) + '"';
                         output += ',"' + ('MLJ ' + yearobj + ' ' + volumenum + ' ' + k.title.split('[' + yearobj + '] ' + volumenum)[1].split('-')[0].replace('MLJ','').trim()).trim() + '.pdf"';
                         if (count == 0) {
@@ -42,7 +42,7 @@ for (const i of nodes.toReversed()) {
                             output += ',[' + yearobj + ']';
                             output += ',texts';
                             output += ',malayan-law-journal';
-                        } 
+                        }
                         if (!k.title.includes('[' + yearobj + '] ' + volumenum + ' MLJ')) {
                             imperfect.push(k.title);
                         } else if (!/^\d{1,3}$|^\d{1,3}[a-z]$/.test(k.title.split('[' + yearobj + '] ' + volumenum)[1].split('-')[0].replace('MLJ','').trim())) {
