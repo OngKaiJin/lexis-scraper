@@ -6,7 +6,10 @@ for (const i of nodes.toReversed()) {
         for (const i of year.toReversed()) {
             for (const [volumeobj, volume] of Object.entries(i)) {
                 for (const i of volume) {
-                    if (list2[count][1].hasOwnProperty("pdf")) {
+                    if (list2[count][1] == undefined) {
+                        i.pdf = undefined;
+                        i.doctitle = undefined;
+                    } else if (list2[count][1].hasOwnProperty("pdf")) {
                         i.pdf = list2[count][1].pdf;
                         i.doctitle = list2[count][1].doctitle;
                     }
@@ -24,7 +27,10 @@ for (const i of nodes.toReversed()) {
             count = 0;
             for (const [volumeobj, volume] of Object.entries(j)) {
                 for (const k of volume) {
-                    if (k.pdf != "--" && k.hasOwnProperty("pdf")) {
+                    if (k.pdf == undefined && k.hasOwnProperty("pdf")) {
+                        count = -1;
+                    }
+                    if (k.pdf != undefined && k.pdf != "--" && k.hasOwnProperty("pdf")) {
                         volumenum = volumeobj.replace('Volume ','').replace('Supplementary','supp');
                         if (count == 0) {
                             output += 'mlj_' + yearobj + '_' + volumenum;
